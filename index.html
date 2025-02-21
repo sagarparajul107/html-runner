@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Code Runner by Sagar Parajuli</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">Code Runner</div>
+      <div class="credit">Created by Sagar Parajuli</div>
+    </header>
+    
+    <main class="main-content">
+      <section class="editor-section">
+        <div class="tabs">
+          <div class="tab active" onclick="switchTab('html')">HTML</div>
+          <div class="tab" onclick="switchTab('css')">CSS</div>
+          <div class="tab" onclick="switchTab('js')">JavaScript</div>
+        </div>
+        <div class="editor-container">
+          <textarea id="htmlCode" class="active" placeholder="Enter HTML code here..."></textarea>
+          <textarea id="cssCode" placeholder="Enter CSS code here..."></textarea>
+          <textarea id="jsCode" placeholder="Enter JavaScript code here..."></textarea>
+        </div>
+      </section>
+      
+      <section class="preview-section">
+        <div class="preview-header">
+          <span>Output</span>
+          <button class="run-btn" onclick="runCode()">Run</button>
+        </div>
+        <div class="preview-container">
+          <div id="error-display" class="error-message"></div>
+          <iframe id="output" sandbox="allow-same-origin allow-scripts allow-modals"></iframe>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
